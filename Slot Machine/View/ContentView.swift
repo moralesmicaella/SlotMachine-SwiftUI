@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   // MARK: - PROPERTY
+  @State private var showInfoView: Bool = false
   
   // MARK: - BODY
   var body: some View {
@@ -156,7 +157,7 @@ struct ContentView: View {
       .overlay(alignment: .topTrailing, content: {
         // INFO
         Button {
-          print("Info View")
+          showInfoView = true
         } label: {
           Image(systemName: "info.circle")
         }
@@ -166,6 +167,9 @@ struct ContentView: View {
       .frame(maxWidth: 720)
       
       // MARK: - POPUP
+    }
+    .sheet(isPresented: $showInfoView) {
+      InfoView()
     }
   }
 }
