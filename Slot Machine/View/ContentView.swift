@@ -15,6 +15,8 @@ struct ContentView: View {
   @State private var showModalView: Bool = false
   @State private var isActiveBet10: Bool = true
   @State private var isActiveBet20: Bool = false
+  @State private var isAnimatingSymbol: Bool = false
+  @State private var isAnimatingModalView: Bool = false
   
   @State private var reels: [Int] = [0, 1, 2]
   @State private var coins: Int = 100
@@ -73,6 +75,7 @@ struct ContentView: View {
   
   func restart() {
     showModalView = false
+    isAnimatingModalView = false
     coins = 100
     activateBet10()
   }
@@ -129,6 +132,12 @@ struct ContentView: View {
             Image(symbols[reels[0]])
               .resizable()
               .modifier(ImageModifier())
+              .opacity(isAnimatingSymbol ? 1 : 0)
+              .offset(y: isAnimatingSymbol ? 0 : -50)
+              .animation(.easeOut(duration: Double.random(in: 0.5...0.7)), value: isAnimatingSymbol)
+              .onAppear {
+                isAnimatingSymbol = true
+              }
           }
           
           HStack(alignment: .center, spacing: 0) {
@@ -139,6 +148,12 @@ struct ContentView: View {
               Image(symbols[reels[1]])
                 .resizable()
                 .modifier(ImageModifier())
+                .opacity(isAnimatingSymbol ? 1 : 0)
+                .offset(y: isAnimatingSymbol ? 0 : -50)
+                .animation(.easeOut(duration: Double.random(in: 0.7...0.9)), value: isAnimatingSymbol)
+                .onAppear {
+                  isAnimatingSymbol = true
+                }
             }
             
             Spacer()
@@ -150,13 +165,30 @@ struct ContentView: View {
               Image(symbols[reels[2]])
                 .resizable()
                 .modifier(ImageModifier())
+                .opacity(isAnimatingSymbol ? 1 : 0)
+                .offset(y: isAnimatingSymbol ? 0 : -50)
+                .animation(.easeOut(duration: Double.random(in: 0.9...1.1)), value: isAnimatingSymbol)
+                .onAppear {
+                  isAnimatingSymbol = true
+                }
             }
           }
           .frame(maxWidth: 500)
           
           // MARK: - SPIN BUTTON
           Button {
+            // SET THE DEFAULT STATE: NO ANIMATION
+            withAnimation {
+              isAnimatingSymbol = false
+            }
+            
             spinReels()
+            
+            // TRIGGER ANIMATION
+            withAnimation {
+              isAnimatingSymbol = true
+            }
+            
             checkSpinResult()
             isGameOver()
           } label: {
@@ -189,14 +221,20 @@ struct ContentView: View {
             Image(K.chips)
               .resizable()
               .opacity(isActiveBet20 ? 1 : 0)
+              .offset(x: isActiveBet20 ? 0 : 20)
+              .animation(.default, value: isActiveBet20)
               .modifier(CasinoChipsModifier())
           }
+          
+          Spacer()
           
           // MARK: - BET 10
           HStack(alignment: .center, spacing: 10) {
             Image(K.chips)
               .resizable()
               .opacity(isActiveBet10 ? 1 : 0)
+              .offset(x: isActiveBet10 ? 0 : -20)
+              .animation(.default, value: isActiveBet10)
               .modifier(CasinoChipsModifier())
 
             Button {
@@ -295,6 +333,12 @@ struct ContentView: View {
           .background(Color.white)
           .cornerRadius(20)
           .shadow(color: K.colorTransparentBlack, radius: 6, x: 0, y: 8)
+          .opacity(isAnimatingModalView ? 1 : 0)
+          .offset(y: isAnimatingModalView ? 0 : -100)
+          .animation(.spring(response: 0.6, dampingFraction: 1.0, blendDuration: 1.0), value: isAnimatingModalView)
+          .onAppear {
+            isAnimatingModalView = true
+          }
         }
       }
     }
