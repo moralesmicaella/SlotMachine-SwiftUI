@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24D2068127DB05A200EDB9A5 /* Slot_MachineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2068027DB05A200EDB9A5 /* Slot_MachineApp.swift */; };
+		24D2068327DB05A200EDB9A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D2068227DB05A200EDB9A5 /* ContentView.swift */; };
+		24D2068527DB05A400EDB9A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D2068427DB05A400EDB9A5 /* Assets.xcassets */; };
+		24D2068827DB05A400EDB9A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24D2068727DB05A400EDB9A5 /* Preview Assets.xcassets */; };
+		24D2069627DB068600EDB9A5 /* game-over.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2068E27DB068600EDB9A5 /* game-over.mp3 */; };
+		24D2069727DB068600EDB9A5 /* background-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2068F27DB068600EDB9A5 /* background-music.mp3 */; };
+		24D2069827DB068600EDB9A5 /* spin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069027DB068600EDB9A5 /* spin.mp3 */; };
+		24D2069927DB068600EDB9A5 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069127DB068600EDB9A5 /* win.mp3 */; };
+		24D2069A27DB068600EDB9A5 /* casino-chips.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069227DB068600EDB9A5 /* casino-chips.mp3 */; };
+		24D2069B27DB068600EDB9A5 /* high-score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069327DB068600EDB9A5 /* high-score.mp3 */; };
+		24D2069C27DB068600EDB9A5 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069427DB068600EDB9A5 /* chimeup.mp3 */; };
+		24D2069D27DB068600EDB9A5 /* riseup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069527DB068600EDB9A5 /* riseup.mp3 */; };
+		24D206A327DB0A4900EDB9A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D206A227DB0A4900EDB9A5 /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		24D2067D27DB05A200EDB9A5 /* Slot Machine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Slot Machine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24D2068027DB05A200EDB9A5 /* Slot_MachineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slot_MachineApp.swift; sourceTree = "<group>"; };
+		24D2068227DB05A200EDB9A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		24D2068427DB05A400EDB9A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24D2068727DB05A400EDB9A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		24D2068E27DB068600EDB9A5 /* game-over.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "game-over.mp3"; sourceTree = "<group>"; };
+		24D2068F27DB068600EDB9A5 /* background-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "background-music.mp3"; sourceTree = "<group>"; };
+		24D2069027DB068600EDB9A5 /* spin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spin.mp3; sourceTree = "<group>"; };
+		24D2069127DB068600EDB9A5 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		24D2069227DB068600EDB9A5 /* casino-chips.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "casino-chips.mp3"; sourceTree = "<group>"; };
+		24D2069327DB068600EDB9A5 /* high-score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "high-score.mp3"; sourceTree = "<group>"; };
+		24D2069427DB068600EDB9A5 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
+		24D2069527DB068600EDB9A5 /* riseup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = riseup.mp3; sourceTree = "<group>"; };
+		24D206A227DB0A4900EDB9A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		24D2067A27DB05A200EDB9A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24D2067427DB05A200EDB9A5 = {
+			isa = PBXGroup;
+			children = (
+				24D2067F27DB05A200EDB9A5 /* Slot Machine */,
+				24D2067E27DB05A200EDB9A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		24D2067E27DB05A200EDB9A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				24D2067D27DB05A200EDB9A5 /* Slot Machine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24D2067F27DB05A200EDB9A5 /* Slot Machine */ = {
+			isa = PBXGroup;
+			children = (
+				24D206A027DB06A900EDB9A5 /* App */,
+				24D2069F27DB069900EDB9A5 /* View */,
+				24D206A127DB06AF00EDB9A5 /* Helper */,
+				24D2069E27DB068B00EDB9A5 /* Sound */,
+				24D2068627DB05A400EDB9A5 /* Preview Content */,
+				24D2068427DB05A400EDB9A5 /* Assets.xcassets */,
+				24D206A227DB0A4900EDB9A5 /* Launch Screen.storyboard */,
+			);
+			path = "Slot Machine";
+			sourceTree = "<group>";
+		};
+		24D2068627DB05A400EDB9A5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				24D2068727DB05A400EDB9A5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		24D2069E27DB068B00EDB9A5 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				24D2068F27DB068600EDB9A5 /* background-music.mp3 */,
+				24D2069227DB068600EDB9A5 /* casino-chips.mp3 */,
+				24D2069427DB068600EDB9A5 /* chimeup.mp3 */,
+				24D2068E27DB068600EDB9A5 /* game-over.mp3 */,
+				24D2069327DB068600EDB9A5 /* high-score.mp3 */,
+				24D2069527DB068600EDB9A5 /* riseup.mp3 */,
+				24D2069027DB068600EDB9A5 /* spin.mp3 */,
+				24D2069127DB068600EDB9A5 /* win.mp3 */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		24D2069F27DB069900EDB9A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24D2068227DB05A200EDB9A5 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24D206A027DB06A900EDB9A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				24D2068027DB05A200EDB9A5 /* Slot_MachineApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		24D206A127DB06AF00EDB9A5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		24D2067C27DB05A200EDB9A5 /* Slot Machine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24D2068B27DB05A400EDB9A5 /* Build configuration list for PBXNativeTarget "Slot Machine" */;
+			buildPhases = (
+				24D2067927DB05A200EDB9A5 /* Sources */,
+				24D2067A27DB05A200EDB9A5 /* Frameworks */,
+				24D2067B27DB05A200EDB9A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Slot Machine";
+			productName = "Slot Machine";
+			productReference = 24D2067D27DB05A200EDB9A5 /* Slot Machine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		24D2067527DB05A200EDB9A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					24D2067C27DB05A200EDB9A5 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 24D2067827DB05A200EDB9A5 /* Build configuration list for PBXProject "Slot Machine" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 24D2067427DB05A200EDB9A5;
+			productRefGroup = 24D2067E27DB05A200EDB9A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				24D2067C27DB05A200EDB9A5 /* Slot Machine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		24D2067B27DB05A200EDB9A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2069727DB068600EDB9A5 /* background-music.mp3 in Resources */,
+				24D2069827DB068600EDB9A5 /* spin.mp3 in Resources */,
+				24D2068827DB05A400EDB9A5 /* Preview Assets.xcassets in Resources */,
+				24D2069C27DB068600EDB9A5 /* chimeup.mp3 in Resources */,
+				24D2069A27DB068600EDB9A5 /* casino-chips.mp3 in Resources */,
+				24D2069927DB068600EDB9A5 /* win.mp3 in Resources */,
+				24D206A327DB0A4900EDB9A5 /* Launch Screen.storyboard in Resources */,
+				24D2069B27DB068600EDB9A5 /* high-score.mp3 in Resources */,
+				24D2069627DB068600EDB9A5 /* game-over.mp3 in Resources */,
+				24D2069D27DB068600EDB9A5 /* riseup.mp3 in Resources */,
+				24D2068527DB05A400EDB9A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		24D2067927DB05A200EDB9A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24D2068327DB05A200EDB9A5 /* ContentView.swift in Sources */,
+				24D2068127DB05A200EDB9A5 /* Slot_MachineApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		24D2068927DB05A400EDB9A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		24D2068A27DB05A400EDB9A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		24D2068C27DB05A400EDB9A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Slot Machine/Preview Content\"";
+				DEVELOPMENT_TEAM = PP55FS799T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.moralesmicaella.Slot-Machine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24D2068D27DB05A400EDB9A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Slot Machine/Preview Content\"";
+				DEVELOPMENT_TEAM = PP55FS799T;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.moralesmicaella.Slot-Machine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		24D2067827DB05A200EDB9A5 /* Build configuration list for PBXProject "Slot Machine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2068927DB05A400EDB9A5 /* Debug */,
+				24D2068A27DB05A400EDB9A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24D2068B27DB05A400EDB9A5 /* Build configuration list for PBXNativeTarget "Slot Machine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24D2068C27DB05A400EDB9A5 /* Debug */,
+				24D2068D27DB05A400EDB9A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 24D2067527DB05A200EDB9A5 /* Project object */;
+}
