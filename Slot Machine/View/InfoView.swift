@@ -47,6 +47,9 @@ struct InfoView: View {
       .padding(.top, 20)
       .padding(.trailing, 20)
     })
+    .onAppear {
+      playMP3(K.backgroundMusic)
+    }
   }
 }
 

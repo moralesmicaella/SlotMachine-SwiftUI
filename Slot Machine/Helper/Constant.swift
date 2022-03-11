@@ -27,6 +27,19 @@ struct K {
   static let spin: String = "gfx-spin"
   static let strawberry: String = "gfx-strawberry"
   
+  // SOUND
+  static let backgroundMusic: String = "background-music"
+  static let casinoChipsSound: String = "casino-chips"
+  static let chimeUpSound: String = "chimeup"
+  static let gameOverSound: String = "game-over"
+  static let highScoreSound: String = "high-score"
+  static let riseUpSound: String = "riseup"
+  static let spinSound: String = "spin"
+  static let winSound: String = "win"
+  
+  // UX
+  static let haptics = UINotificationFeedbackGenerator()
+  
   // USER DEFAULTS KEYS
   static let highScore: String = "HighScore"
 }

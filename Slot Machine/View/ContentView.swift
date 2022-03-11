@@ -29,6 +29,8 @@ struct ContentView: View {
     reels = reels.map { _ in
       Int.random(in: 0..<symbols.count)
     }
+    playMP3(K.spinSound)
+    K.haptics.notificationOccurred(.success)
   }
   
   func checkSpinResult() {
@@ -37,6 +39,8 @@ struct ContentView: View {
       
       if coins > highScore {
         setNewHighScore()
+      } else {
+        playMP3(K.winSound)
       }
     } else {
       playerLoses()
@@ -49,6 +53,7 @@ struct ContentView: View {
   
   func setNewHighScore() {
     highScore = coins
+    playMP3(K.highScoreSound)
   }
   
   func playerLoses() {
@@ -59,17 +64,22 @@ struct ContentView: View {
     betAmount = 20
     isActiveBet20 = true
     isActiveBet10 = false
+    playMP3(K.casinoChipsSound)
+    K.haptics.notificationOccurred(.success)
   }
   
   func activateBet10() {
     betAmount = 10
     isActiveBet10 = true
     isActiveBet20 = false
+    playMP3(K.casinoChipsSound)
+    K.haptics.notificationOccurred(.success)
   }
   
   func isGameOver() {
     if coins <= 0 {
       showModalView = true
+      playMP3(K.gameOverSound)
     }
   }
   
@@ -78,6 +88,7 @@ struct ContentView: View {
     isAnimatingModalView = false
     coins = 100
     activateBet10()
+    playMP3(K.chimeUpSound)
   }
   
   // MARK: - BODY
@@ -137,6 +148,7 @@ struct ContentView: View {
               .animation(.easeOut(duration: Double.random(in: 0.5...0.7)), value: isAnimatingSymbol)
               .onAppear {
                 isAnimatingSymbol = true
+                playMP3(K.riseUpSound)
               }
           }
           
@@ -342,7 +354,9 @@ struct ContentView: View {
         }
       }
     }
-    .sheet(isPresented: $showInfoView) {
+    .sheet(isPresented: $showInfoView, onDismiss: {
+      audioPlayer?.stop()
+    }) {
       InfoView()
     }
   }

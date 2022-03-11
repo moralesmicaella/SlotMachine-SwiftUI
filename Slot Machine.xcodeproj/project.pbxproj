@@ -27,6 +27,7 @@
 		24D206AF27DB1AC100EDB9A5 /* ReelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206AE27DB1AC100EDB9A5 /* ReelView.swift */; };
 		24D206B127DB235600EDB9A5 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206B027DB235600EDB9A5 /* InfoView.swift */; };
 		24D206B327DB24A600EDB9A5 /* FormRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206B227DB24A600EDB9A5 /* FormRowView.swift */; };
+		24D206B527DB463A00EDB9A5 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206B427DB463900EDB9A5 /* AudioPlayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		24D206AE27DB1AC100EDB9A5 /* ReelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReelView.swift; sourceTree = "<group>"; };
 		24D206B027DB235600EDB9A5 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		24D206B227DB24A600EDB9A5 /* FormRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormRowView.swift; sourceTree = "<group>"; };
+		24D206B427DB463900EDB9A5 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				24D206A627DB104800EDB9A5 /* Constant.swift */,
 				24D206AA27DB136700EDB9A5 /* Modifier.swift */,
 				24D206AC27DB180E00EDB9A5 /* Extension.swift */,
+				24D206B427DB463900EDB9A5 /* AudioPlayer.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24D206B527DB463A00EDB9A5 /* AudioPlayer.swift in Sources */,
 				24D206B127DB235600EDB9A5 /* InfoView.swift in Sources */,
 				24D2068327DB05A200EDB9A5 /* ContentView.swift in Sources */,
 				24D206A927DB131B00EDB9A5 /* LogoView.swift in Sources */,
