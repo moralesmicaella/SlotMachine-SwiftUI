@@ -20,6 +20,10 @@
 		24D2069C27DB068600EDB9A5 /* chimeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069427DB068600EDB9A5 /* chimeup.mp3 */; };
 		24D2069D27DB068600EDB9A5 /* riseup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 24D2069527DB068600EDB9A5 /* riseup.mp3 */; };
 		24D206A327DB0A4900EDB9A5 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24D206A227DB0A4900EDB9A5 /* Launch Screen.storyboard */; };
+		24D206A727DB104800EDB9A5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206A627DB104800EDB9A5 /* Constant.swift */; };
+		24D206A927DB131B00EDB9A5 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206A827DB131B00EDB9A5 /* LogoView.swift */; };
+		24D206AB27DB136700EDB9A5 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206AA27DB136700EDB9A5 /* Modifier.swift */; };
+		24D206AD27DB180F00EDB9A5 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D206AC27DB180E00EDB9A5 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,10 @@
 		24D2069427DB068600EDB9A5 /* chimeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chimeup.mp3; sourceTree = "<group>"; };
 		24D2069527DB068600EDB9A5 /* riseup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = riseup.mp3; sourceTree = "<group>"; };
 		24D206A227DB0A4900EDB9A5 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		24D206A627DB104800EDB9A5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		24D206A827DB131B00EDB9A5 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		24D206AA27DB136700EDB9A5 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
+		24D206AC27DB180E00EDB9A5 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +79,7 @@
 			children = (
 				24D206A027DB06A900EDB9A5 /* App */,
 				24D2069F27DB069900EDB9A5 /* View */,
+				24D206A427DB0F8400EDB9A5 /* Component */,
 				24D206A127DB06AF00EDB9A5 /* Helper */,
 				24D2069E27DB068B00EDB9A5 /* Sound */,
 				24D2068627DB05A400EDB9A5 /* Preview Content */,
@@ -122,8 +131,19 @@
 		24D206A127DB06AF00EDB9A5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				24D206A627DB104800EDB9A5 /* Constant.swift */,
+				24D206AA27DB136700EDB9A5 /* Modifier.swift */,
+				24D206AC27DB180E00EDB9A5 /* Extension.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		24D206A427DB0F8400EDB9A5 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				24D206A827DB131B00EDB9A5 /* LogoView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,7 +226,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24D2068327DB05A200EDB9A5 /* ContentView.swift in Sources */,
+				24D206A927DB131B00EDB9A5 /* LogoView.swift in Sources */,
 				24D2068127DB05A200EDB9A5 /* Slot_MachineApp.swift in Sources */,
+				24D206AD27DB180F00EDB9A5 /* Extension.swift in Sources */,
+				24D206A727DB104800EDB9A5 /* Constant.swift in Sources */,
+				24D206AB27DB136700EDB9A5 /* Modifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
