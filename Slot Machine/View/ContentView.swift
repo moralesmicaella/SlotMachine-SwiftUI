@@ -10,6 +10,9 @@ import SwiftUI
 struct ContentView: View {
   // MARK: - PROPERTY
   @State private var showInfoView: Bool = false
+  @State private var isActiveBet10: Bool = true
+  @State private var isActiveBet20: Bool = false
+  
   @State private var reels: [Int] = [0, 1, 2]
   @State private var highScore: Int = 0
   @State private var coins: Int = 100
@@ -46,6 +49,18 @@ struct ContentView: View {
   
   func playerLoses() {
     coins -= betAmount
+  }
+  
+  func activateBet20() {
+    betAmount = 20
+    isActiveBet20 = true
+    isActiveBet10 = false
+  }
+  
+  func activateBet10() {
+    betAmount = 10
+    isActiveBet10 = true
+    isActiveBet20 = false
   }
   
   // MARK: - BODY
@@ -147,18 +162,18 @@ struct ContentView: View {
           // MARK: - BET 20
           HStack(alignment: .center, spacing: 10) {
             Button {
-              print("Bet 20 coins")
+              activateBet20()
             } label: {
               Text("20")
                 .fontWeight(.heavy)
-                .foregroundColor(.white)
+                .foregroundColor(isActiveBet20 ? K.colorYellow : .white)
                 .modifier(BetNumberModifier())
             }
             .modifier(BetCapsuleModifier())
             
             Image(K.chips)
               .resizable()
-              .opacity(0)
+              .opacity(isActiveBet20 ? 1 : 0)
               .modifier(CasinoChipsModifier())
           }
           
@@ -166,15 +181,15 @@ struct ContentView: View {
           HStack(alignment: .center, spacing: 10) {
             Image(K.chips)
               .resizable()
-              .opacity(1)
+              .opacity(isActiveBet10 ? 1 : 0)
               .modifier(CasinoChipsModifier())
 
             Button {
-              print("Bet 10 coins")
+              activateBet10()
             } label: {
               Text("10")
                 .fontWeight(.heavy)
-                .foregroundColor(K.colorYellow)
+                .foregroundColor(isActiveBet10 ? K.colorYellow : .white)
                 .modifier(BetNumberModifier())
             }
             .modifier(BetCapsuleModifier())
