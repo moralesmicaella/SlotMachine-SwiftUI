@@ -96,13 +96,51 @@ struct ContentView: View {
               .resizable()
               .modifier(ImageModifier())
           }
-
+          .buttonStyle(.plain)
+          
         }
         .layoutPriority(2)
         
         // MARK: - FOOTER
-        
         Spacer()
+        
+        HStack {
+          // MARK: - BET 20
+          HStack(alignment: .center, spacing: 10) {
+            Button {
+              print("Bet 20 coins")
+            } label: {
+              Text("20")
+                .fontWeight(.heavy)
+                .foregroundColor(.white)
+                .modifier(BetNumberModifier())
+            }
+            .modifier(BetCapsuleModifier())
+            
+            Image(chips)
+              .resizable()
+              .opacity(0)
+              .modifier(CasinoChipsModifier())
+          }
+          
+          // MARK: - BET 10
+          HStack(alignment: .center, spacing: 10) {
+            Image(chips)
+              .resizable()
+              .opacity(1)
+              .modifier(CasinoChipsModifier())
+
+            Button {
+              print("Bet 10 coins")
+            } label: {
+              Text("10")
+                .fontWeight(.heavy)
+                .foregroundColor(colorYellow)
+                .modifier(BetNumberModifier())
+            }
+            .modifier(BetCapsuleModifier())
+          }
+        }
         
       }
       // MARK: - BUTTONS
