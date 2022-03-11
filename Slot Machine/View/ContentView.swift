@@ -10,12 +10,49 @@ import SwiftUI
 struct ContentView: View {
   // MARK: - PROPERTY
   @State private var showInfoView: Bool = false
+  @State private var reels: [Int] = [0, 1, 2]
+  @State private var highScore: Int = 0
+  @State private var coins: Int = 100
+  @State private var betAmount: Int = 10
+  
+  private let symbols: [String] = [K.bell, K.cherry, K.coin, K.grape, K.seven, K.strawberry]
+  
+  // MARK: - FUNCTION
+  func spinReels() {
+    reels = reels.map { _ in
+      Int.random(in: 0..<symbols.count)
+    }
+  }
+  
+  func checkSpinResult() {
+    if reels[0] == reels[1] && reels[1] == reels[2] {
+      playerWins()
+      
+      if coins > highScore {
+        setNewHighScore()
+      }
+    } else {
+      playerLoses()
+    }
+  }
+  
+  func playerWins() {
+    coins += betAmount * 10
+  }
+  
+  func setNewHighScore() {
+    highScore = coins
+  }
+  
+  func playerLoses() {
+    coins -= betAmount
+  }
   
   // MARK: - BODY
   var body: some View {
     ZStack {
       // MARK: - BACKGROUND
-      LinearGradient(colors: [colorPink, colorPurple], startPoint: .top, endPoint: .bottom)
+      LinearGradient(colors: [K.colorPink, K.colorPurple], startPoint: .top, endPoint: .bottom)
         .ignoresSafeArea()
       
       // MARK: - INTERFACE
@@ -33,7 +70,7 @@ struct ContentView: View {
               .scoreLabelStyle()
               .multilineTextAlignment(.trailing)
             
-            Text("100")
+            Text("\(coins)")
               .scoreNumberStyle()
               .modifier(ScoreNumberModifier())
           }
@@ -42,7 +79,7 @@ struct ContentView: View {
           Spacer()
           
           HStack {
-            Text("200")
+            Text("\(highScore)")
               .scoreNumberStyle()
               .modifier(ScoreNumberModifier())
             
@@ -60,7 +97,7 @@ struct ContentView: View {
           ZStack {
             ReelView()
             
-            Image(bell)
+            Image(symbols[reels[0]])
               .resizable()
               .modifier(ImageModifier())
           }
@@ -70,7 +107,7 @@ struct ContentView: View {
             ZStack {
               ReelView()
               
-              Image(seven)
+              Image(symbols[reels[1]])
                 .resizable()
                 .modifier(ImageModifier())
             }
@@ -81,7 +118,7 @@ struct ContentView: View {
             ZStack {
               ReelView()
               
-              Image(cherry)
+              Image(symbols[reels[2]])
                 .resizable()
                 .modifier(ImageModifier())
             }
@@ -90,9 +127,10 @@ struct ContentView: View {
           
           // MARK: - SPIN BUTTON
           Button {
-            print("Spin the reels")
+            spinReels()
+            checkSpinResult()
           } label: {
-            Image(spin)
+            Image(K.spin)
               .renderingMode(.original)
               .resizable()
               .modifier(ImageModifier())
@@ -118,7 +156,7 @@ struct ContentView: View {
             }
             .modifier(BetCapsuleModifier())
             
-            Image(chips)
+            Image(K.chips)
               .resizable()
               .opacity(0)
               .modifier(CasinoChipsModifier())
@@ -126,7 +164,7 @@ struct ContentView: View {
           
           // MARK: - BET 10
           HStack(alignment: .center, spacing: 10) {
-            Image(chips)
+            Image(K.chips)
               .resizable()
               .opacity(1)
               .modifier(CasinoChipsModifier())
@@ -136,7 +174,7 @@ struct ContentView: View {
             } label: {
               Text("10")
                 .fontWeight(.heavy)
-                .foregroundColor(colorYellow)
+                .foregroundColor(K.colorYellow)
                 .modifier(BetNumberModifier())
             }
             .modifier(BetCapsuleModifier())

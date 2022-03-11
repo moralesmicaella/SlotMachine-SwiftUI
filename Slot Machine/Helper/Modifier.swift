@@ -10,7 +10,7 @@ import SwiftUI
 struct ShadowModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
-      .shadow(color: colorTransparentBlack, radius: 0, x: 0, y: 6)
+      .shadow(color: K.colorTransparentBlack, radius: 0, x: 0, y: 6)
   }
 }
 
@@ -26,7 +26,7 @@ struct ButtonModifier: ViewModifier {
 struct ScoreNumberModifier: ViewModifier {
   func body(content: Content) -> some View {
     content
-      .shadow(color: colorTransparentBlack, radius: 0, x: 0, y: 3)
+      .shadow(color: K.colorTransparentBlack, radius: 0, x: 0, y: 3)
       .layoutPriority(1)
   }
 }
@@ -39,7 +39,7 @@ struct ScoreContainerModifier: ViewModifier {
       .frame(minWidth: 128)
       .background(
         Capsule()
-          .foregroundColor(colorTransparentBlack)
+          .foregroundColor(K.colorTransparentBlack)
       )
   }
 }
@@ -59,7 +59,7 @@ struct BetNumberModifier: ViewModifier {
       .font(.system(.title, design: .rounded))
       .padding(.vertical, 5)
       .frame(width: 90)
-      .shadow(color: colorTransparentBlack, radius: 0, x: 0, y: 3)
+      .shadow(color: K.colorTransparentBlack, radius: 0, x: 0, y: 3)
   }
 }
 
@@ -69,12 +69,12 @@ struct BetCapsuleModifier: ViewModifier {
       .buttonStyle(.plain)
       .background(
         Capsule()
-          .fill(LinearGradient(colors: [colorPink, colorPurple], startPoint: .top, endPoint: .bottom))
+          .fill(LinearGradient(colors: [K.colorPink, K.colorPurple], startPoint: .top, endPoint: .bottom))
       )
       .padding(3)
       .background(
         Capsule()
-          .fill(LinearGradient(colors: [colorPink, colorPurple], startPoint: .bottom, endPoint: .top))
+          .fill(LinearGradient(colors: [K.colorPink, K.colorPurple], startPoint: .bottom, endPoint: .top))
           .modifier(ShadowModifier())
       )
   }

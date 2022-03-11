@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ReelView: View {
   var body: some View {
-    Image(reel)
+    Image(K.reel)
       .resizable()
       .modifier(ImageModifier())
   }

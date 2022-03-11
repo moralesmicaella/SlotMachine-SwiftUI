@@ -7,21 +7,23 @@
 
 import SwiftUI
 
-// COLORS
-let colorPink: Color = Color("ColorPink")
-let colorPurple: Color = Color("ColorPurple")
-let colorYellow: Color = Color("ColorYellow")
-let colorTransparentBlack: Color = Color("ColorTransparentBlack")
-
-// GRAPHICS
-let bell: String = "gfx-bell"
-let chips: String = "gfx-casino-chips"
-let cherry: String = "gfx-cherry"
-let coin: String =  "gfx-coin"
-let grape: String = "gfx-grape"
-let reel: String = "gfx-reel"
-let sevenReel: String = "gfx-seven-reel"
-let seven: String = "gfx-seven"
-let slotMachine: String = "gfx-slot-machine"
-let spin: String = "gfx-spin"
-let strawberry: String = "gfx-strawberry"
+struct K {
+  // COLORS
+  static let colorPink: Color = Color("ColorPink")
+  static let colorPurple: Color = Color("ColorPurple")
+  static let colorYellow: Color = Color("ColorYellow")
+  static let colorTransparentBlack: Color = Color("ColorTransparentBlack")
+  
+  // GRAPHICS
+  static let bell: String = "gfx-bell"
+  static let chips: String = "gfx-casino-chips"
+  static let cherry: String = "gfx-cherry"
+  static let coin: String =  "gfx-coin"
+  static let grape: String = "gfx-grape"
+  static let reel: String = "gfx-reel"
+  static let sevenReel: String = "gfx-seven-reel"
+  static let seven: String = "gfx-seven"
+  static let slotMachine: String = "gfx-slot-machine"
+  static let spin: String = "gfx-spin"
+  static let strawberry: String = "gfx-strawberry"
+}
