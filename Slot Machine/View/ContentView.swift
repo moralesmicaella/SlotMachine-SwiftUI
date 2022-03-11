@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
   // MARK: - PROPERTY
   @State private var showInfoView: Bool = false
+  @State private var showModalView: Bool = false
   @State private var isActiveBet10: Bool = true
   @State private var isActiveBet20: Bool = false
   
@@ -61,6 +62,17 @@ struct ContentView: View {
     betAmount = 10
     isActiveBet10 = true
     isActiveBet20 = false
+  }
+  
+  func isGameOver() {
+    if coins <= 0 {
+      showModalView = true
+    }
+  }
+  
+  func restart() {
+    showModalView = false
+    coins = 100
   }
   
   // MARK: - BODY
@@ -144,6 +156,7 @@ struct ContentView: View {
           Button {
             spinReels()
             checkSpinResult()
+            isGameOver()
           } label: {
             Image(K.spin)
               .renderingMode(.original)
@@ -218,8 +231,69 @@ struct ContentView: View {
       })
       .padding()
       .frame(maxWidth: 720)
+      .blur(radius: showModalView ? 5 : 0)
       
       // MARK: - POPUP
+      if showModalView {
+        ZStack {
+          K.colorTransparentBlack
+            .ignoresSafeArea()
+          
+          // MODAL
+          VStack(spacing: 0) {
+            // TITLE
+            Text("GAME OVER")
+              .font(.system(.title, design: .rounded))
+              .fontWeight(.heavy)
+              .padding()
+              .frame(minWidth: 0, maxWidth: .infinity)
+              .background(K.colorPink)
+              .foregroundColor(.white)
+              
+            Spacer()
+            
+            // MESSAGE
+            VStack(alignment: .center, spacing: 16) {
+              Image(K.sevenReel)
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: 72)
+              
+              Text("Bad luck! You lost all of the coins. \nLet's play again")
+                .font(.system(.body, design: .rounded))
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
+                .foregroundColor(.gray)
+                .layoutPriority(1)
+              
+              Button {
+                restart()
+              } label: {
+                Text("NEW GAME")
+                  .font(.system(.body, design: .rounded))
+                  .fontWeight(.semibold)
+                  .foregroundColor(K.colorPink)
+                  .padding(.horizontal, 12)
+                  .padding(.vertical, 8)
+                  .frame(minWidth: 128)
+                  .background(
+                    Capsule()
+                      .stroke(lineWidth: 1.75)
+                      .foregroundColor(K.colorPink)
+                  )
+              }
+              .buttonStyle(.plain)
+
+            }
+            
+            Spacer()
+          }
+          .frame(minWidth: 280, idealWidth: 280, maxWidth: 320, minHeight: 260, idealHeight: 280, maxHeight: 320, alignment: .center)
+          .background(Color.white)
+          .cornerRadius(20)
+          .shadow(color: K.colorTransparentBlack, radius: 6, x: 0, y: 8)
+        }
+      }
     }
     .sheet(isPresented: $showInfoView) {
       InfoView()
