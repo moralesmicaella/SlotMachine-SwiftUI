@@ -26,4 +26,7 @@ struct K {
   static let slotMachine: String = "gfx-slot-machine"
   static let spin: String = "gfx-spin"
   static let strawberry: String = "gfx-strawberry"
+  
+  // USER DEFAULTS KEYS
+  static let highScore: String = "HighScore"
 }

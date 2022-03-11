@@ -9,13 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
   // MARK: - PROPERTY
+  @AppStorage(K.highScore) private var highScore: Int = 0
+  
   @State private var showInfoView: Bool = false
   @State private var showModalView: Bool = false
   @State private var isActiveBet10: Bool = true
   @State private var isActiveBet20: Bool = false
   
   @State private var reels: [Int] = [0, 1, 2]
-  @State private var highScore: Int = 0
   @State private var coins: Int = 100
   @State private var betAmount: Int = 10
   
@@ -73,6 +74,7 @@ struct ContentView: View {
   func restart() {
     showModalView = false
     coins = 100
+    activateBet10()
   }
   
   // MARK: - BODY
@@ -214,7 +216,8 @@ struct ContentView: View {
       .overlay(alignment: .topLeading, content: {
         // RESET
         Button {
-          print("Reset the game")
+          restart()
+          highScore = 0
         } label: {
           Image(systemName: "arrow.2.circlepath.circle")
         }
